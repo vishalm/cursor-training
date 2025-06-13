@@ -1,5 +1,11 @@
 # Backend Service
 
+[![Backend CI](https://github.com/yourusername/restaurant-ordering-system/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/yourusername/restaurant-ordering-system/actions/workflows/backend-ci.yml)
+[![Code Coverage](https://codecov.io/gh/yourusername/restaurant-ordering-system/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/restaurant-ordering-system)
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.109.2-green.svg)](https://fastapi.tiangolo.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 The backend service is built with FastAPI and provides a robust API for the restaurant ordering system. It includes AI-powered features using Ollama and comprehensive test coverage.
 
 ## Features

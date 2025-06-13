@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: restaurant-backend
+    restart: unless-stopped
+    environment:
+      - FLASK_APP=run.py
+      - FLASK_ENV=production
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - OLLAMA_MODEL=qwen2.5:latest
+      - JWT_SECRET=${JWT_SECRET}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - backend_data:/app/data
+    depends_on:
+      - ollama
+    networks:
+      - restaurant-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: restaurant-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - restaurant-network
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: restaurant-ollama
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - restaurant-network
+
+volumes:
+  backend_data:
+  ollama_data:
+
+networks:
+  restaurant-network:
+    driver: bridge 

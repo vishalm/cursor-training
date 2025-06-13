@@ -1,5 +1,13 @@
 # AI-Powered Restaurant Ordering System
 
+[![Backend CI](https://github.com/yourusername/restaurant-ordering-system/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/yourusername/restaurant-ordering-system/actions/workflows/backend-ci.yml)
+[![Frontend CI](https://github.com/yourusername/restaurant-ordering-system/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/yourusername/restaurant-ordering-system/actions/workflows/frontend-ci.yml)
+[![Code Coverage](https://codecov.io/gh/yourusername/restaurant-ordering-system/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/restaurant-ordering-system)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![Node Version](https://img.shields.io/badge/node-18%2B-green.svg)](https://nodejs.org/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
 A modern restaurant ordering system that uses AI to enhance the ordering experience. The system features a FastAPI backend and a React frontend with a beautiful, responsive UI.
 
 ## Architecture
